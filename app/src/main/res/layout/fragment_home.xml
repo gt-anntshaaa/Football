@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_8sdp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/head_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/iv_soccer"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/soccer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/desc_image" />
+
+        <TextView
+            android:id="@+id/tv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/iv_soccer"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/iv_soccer"
+            android:text="@string/football_classement"
+            style="@style/TextAppearance.Material3.TitleLarge"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_head"
+            app:layout_constraintStart_toStartOf="@id/tv_head"
+            android:text="@string/sub_head"
+            style="@style/TextAppearance.Material3.TitleSmall"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:id="@+id/table_heading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/klub" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/ma" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/me" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/s" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/k" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/gm" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="@string/gk" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/table_header"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="P" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/table_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/table_heading_layout"/>
+
+
+
+</LinearLayout>

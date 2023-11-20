@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.football.presentation.home.HomeFragment"
+        android:label="Football"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_clubFragment2"
+            app:destination="@id/clubFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_multiScoreFragment"
+            app:destination="@id/multiScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.football.presentation.score.ScoreFragment"
+        android:label="Match"
+        tools:layout="@layout/fragment_score" />
+    <fragment
+        android:id="@+id/clubFragment"
+        android:name="com.example.football.presentation.club.ClubFragment"
+        android:label="Club"
+        tools:layout="@layout/fragment_club" />
+    <fragment
+        android:id="@+id/multiScoreFragment"
+        android:name="com.example.football.presentation.score.MultiScoreFragment"
+        android:label="Multi Match"
+        tools:layout="@layout/fragment_multi_score" />
+</navigation>

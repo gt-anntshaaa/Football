@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/clubFragment"
+        android:title="Club"
+        android:icon="@drawable/soccer"/>
+
+    <item android:title="Match Score">
+        <menu>
+            <item
+                android:id="@+id/scoreFragment"
+                android:title="Score"
+                android:icon="@drawable/ic_score"/>
+            <item
+                android:id="@+id/multiScoreFragment"
+                android:title="Multi Score"
+                android:icon="@drawable/ic_score"/>
+
+        </menu>
+        </item>
+<!--    <group android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/clubFragment"-->
+<!--            android:title="Club"/>-->
+<!--        <item-->
+<!--            android:id="@+id/scoreFragment"-->
+<!--            android:title="Score"/>-->
+<!--    </group>-->
+</menu>

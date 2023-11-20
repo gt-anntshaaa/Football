@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.club.ClubFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_soccers"
+        android:contentDescription="@string/desc_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginTop="@dimen/_25sdp">
+        <TextView
+            android:id="@+id/tv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20ssp"
+            android:text="Data Club"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_club"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Club"
+            app:startIconDrawable="@drawable/ic_soccer_24"
+            app:layout_constraintTop_toBottomOf="@id/tv_head">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:endIconMode="clear_text"
+            android:hint="City"
+            app:startIconDrawable="@drawable/ic_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_head">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_city"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Save"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_9sdp"
+            android:textSize="@dimen/_16ssp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

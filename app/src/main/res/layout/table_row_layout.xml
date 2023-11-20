@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/table_heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/tv_club"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
+            <TextView
+                android:id="@+id/tv_main"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_menang"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_seri"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_kalah"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_goal_menang"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_goal_kalah"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_poin"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textAlignment="center" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

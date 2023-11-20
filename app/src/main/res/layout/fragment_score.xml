@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_8sdp"
+    tools:context=".presentation.score.ScoreFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_soccers"
+        android:contentDescription="@string/desc_image" />
+
+    <LinearLayout
+        android:id="@+id/score_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginTop="@dimen/_25sdp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20ssp"
+                android:layout_gravity="center_horizontal"
+                android:text="Host Team"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dropdown_host_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:startIconDrawable="@drawable/ic_soccer_24"
+                android:hint="Host Team"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+                <AutoCompleteTextView
+                    android:id="@+id/tv_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:text="Host Team" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Host score"
+                app:startIconDrawable="@drawable/ic_score"
+                app:layout_constraintTop_toBottomOf="@id/tv_head">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_host_score"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_20ssp"
+                android:text="Guest Team"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:startIconDrawable="@drawable/ic_soccer_24"
+                android:id="@+id/dropdown_guest_team"
+                android:hint="Guest Team"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+            <AutoCompleteTextView
+                android:id="@+id/tv_guest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="Guest Team"
+                android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Guest score"
+                app:startIconDrawable="@drawable/ic_score"
+                app:layout_constraintTop_toBottomOf="@id/tv_head">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_guest_score"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@id/score_layout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_9sdp"
+        android:textSize="@dimen/_16ssp"
+        android:layout_gravity="center_horizontal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

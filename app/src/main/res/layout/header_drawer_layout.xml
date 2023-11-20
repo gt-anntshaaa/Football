@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ball"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/desc_image" />
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:fontFamily="@font/syne_tactile"-->
+<!--        android:text="Football"-->
+<!--        android:padding="@dimen/_5sdp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/_25ssp" />-->
+
+
+</FrameLayout>

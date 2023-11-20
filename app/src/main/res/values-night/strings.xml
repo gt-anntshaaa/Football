@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc_image">image</string>
+    <string name="no">No</string>
+    <string name="klub">Klub</string>
+    <string name="ma">Ma</string>
+    <string name="me">Me</string>
+    <string name="s">S</string>
+    <string name="k">K</string>
+    <string name="gm">GM</string>
+    <string name="gk">GK</string>
+    <string name="points">Points</string>
+    <string name="football_classement">Football Classement</string>
+    <string name="sub_head">Classement premier league 2023/2024</string>
+    <string name="select_a_guest_club">Select a guest club</string>
+    <string name="no_data_available">No Data Available</string>
+</resources>

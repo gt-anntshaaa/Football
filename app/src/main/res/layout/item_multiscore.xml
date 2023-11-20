@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_18sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_no_club"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLUB 1"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20ssp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropdown_host_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:startIconDrawable="@drawable/ic_soccer_24"
+        android:hint="Host Team"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+        <AutoCompleteTextView
+            android:id="@+id/tv_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:text="Host Team" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_host_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Host score"
+        app:startIconDrawable="@drawable/ic_score">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_host_score"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:startIconDrawable="@drawable/ic_soccer_24"
+        android:id="@+id/dropdown_guest_team"
+        android:hint="Guest Team"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+        <AutoCompleteTextView
+            android:id="@+id/tv_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:maxLines="1"
+            android:text="Guest Team"
+            android:maxLength="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_guest_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Guest score"
+        app:startIconDrawable="@drawable/ic_score">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_guest_score"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>
